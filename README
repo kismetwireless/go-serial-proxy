@@ -1,0 +1,34 @@
+# Basic Serial Proxy
+
+Several useful retro terminal emulators, such as Mittenterm, are unable to directly talk to 
+serial devices on all platforms (such as sandboxed macOS).
+
+This is a basic serial proxy for connecting a serial port to a network.
+
+## Building
+
+1.  Install Go.  This is often most easily accomplished through a [package management tool such as Brew](https://formulae.brew.sh/formula/go)
+2.  cd to the `cmd` directory of the git: `cd cmd`
+3.  Build the forwarder: `go build serialfwd`
+
+## Using
+
+The serial forwarder connects the serial port to a TCP network port.  
+
+To find the serial interface, look in `/dev`; typically on macOS they will be named `/dev/cu.usbserial-FOO`
+
+Using Mittenterm or other terminal tools, connect to the proxy at `localhost` on the port specified, by default, `8888`.
+
+```
+Usage of ./serialfwd:
+  -device string
+    	Path to serial port (typically /dev/cu.usbserial-SOMETHING) (default "/dev/cu.usbserial-foo")
+  -help
+    	Help
+  -list
+    	List serial ports
+  -port string
+    	TCP port (default "8888")
+  -speed int
+    	Serial port speed (default 9600)
+```
