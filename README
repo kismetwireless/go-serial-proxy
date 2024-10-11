@@ -9,13 +9,13 @@ This is a basic serial proxy for connecting a serial port to a network.
 
 1.  Install Go.  This is often most easily accomplished through a [package management tool such as Brew](https://formulae.brew.sh/formula/go)
 2.  cd to the `cmd` directory of the git: `cd cmd`
-3.  Build the forwarder: `go build serialfwd`
+3.  Build the forwarder: `go build serialfwd.go`
 
 ## Using
 
 The serial forwarder connects the serial port to a TCP network port.  
 
-To find the serial interface, look in `/dev`; typically on macOS they will be named `/dev/cu.usbserial-FOO`
+To find the serial interface, look in `/dev`; typically on macOS they will be named `/dev/cu.usbserial-FOO`. You can also `serialfwd -list` to get a list.
 
 Using Muffinterm or other terminal tools, connect to the proxy at `localhost` on the port specified, by default, `8888`.
 
