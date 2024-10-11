@@ -1,4 +1,4 @@
-module serialfwd
+module github.com/kismetwireless/go-serial-proxy
 
 go 1.22.1
 
