@@ -1,6 +1,6 @@
 # Basic Serial Proxy
 
-Several useful retro terminal emulators, such as Mittenterm, are unable to directly talk to 
+Several useful retro terminal emulators, such as [Muffinterm](https://muffinterm.app/), are unable to directly talk to 
 serial devices on all platforms (such as sandboxed macOS).
 
 This is a basic serial proxy for connecting a serial port to a network.
@@ -17,7 +17,7 @@ The serial forwarder connects the serial port to a TCP network port.
 
 To find the serial interface, look in `/dev`; typically on macOS they will be named `/dev/cu.usbserial-FOO`
 
-Using Mittenterm or other terminal tools, connect to the proxy at `localhost` on the port specified, by default, `8888`.
+Using Muffinterm or other terminal tools, connect to the proxy at `localhost` on the port specified, by default, `8888`.
 
 ```
 Usage of ./serialfwd:
